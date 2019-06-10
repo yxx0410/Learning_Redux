@@ -1,13 +1,10 @@
 # reducer
 functional programming
-## generate reducer
-1. pure, immutable
-2. use creator to avoid boilerplate
 
 ## reducer concept
 1. (old,action)=>new
 2. pure
-3. non-mutation on state, always generate new
+3. non-mutation on state, always generate new state
 4. thinking state and state structure
 5. state composition = reducer composition
 6. higher order reducers
@@ -37,5 +34,9 @@ use ... or object.assign to generate new instead of object1=object2, or object.x
 
 ## state structure
 1. normalizing data in state like a database with id
-2. splitting relational data into divided tables
+2. splitting relational data into divided tables 
 
+## Common Mistake 
+1. New variables that point to the same objects: js object and array is referenced. object1 = object still reference to same memory object1 = {...object} // Object.assign({},object,{})
+2. Only making a shallow copy of one level, nested object also has same referenced problem; Copying All Levels of Nested Data
+3. Array: splice,push,pop mutate initial state: use slice, ... , concat ,filter/map to return new array

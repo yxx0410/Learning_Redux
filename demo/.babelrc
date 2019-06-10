@@ -11,8 +11,5 @@
     "@babel/preset-react"
   ],
   "plugins": ["@babel/plugin-proposal-object-rest-spread"]
-<<<<<<< HEAD
-=======
   
->>>>>>> ac0847b9a00d046a6ce2ffa6f88a2769e25cee02
 }
